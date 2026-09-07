@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GLA Health Center - Appointment</title>
+</head>
+<body>
+
+    <h1>MAAN Health Center</h1>
+    <h2>Doctor Appointment Booking</h2>
+    
+    <p>
+        Book your appointment with our doctors. Please fill the details below.
+    </p>
+
+    <!-- Clinic Timings Table -->
+    <h3>Clinic Timings</h3>
+    <table border="1">
+        <tr>
+            <th>Day</th>
+            <th>Morning</th>
+            <th>Evening</th>
+        </tr>
+        <tr>
+            <td>Monday - Friday</td>
+            <td>9:00 AM - 1:00 PM</td>
+            <td>4:00 PM - 7:00 PM</td>
+        </tr>
+        <tr>
+            <td>Saturday</td>
+            <td>9:00 AM - 12:00 PM</td>
+            <td>Closed</td>
+        </tr>
+        <tr>
+            <td>Sunday</td>
+            <td colspan="2">Closed</td>
+        </tr>
+    </table>
+    <br>
+
+    <form>
+        <label>Patient Name * : 
+            <input type="text" name="patient_name" required minlength="2" maxlength="50" placeholder="Full name">
+        </label>
+        <br><br>
+
+        <label>Email * : 
+            <input type="email" name="email" required placeholder="patient@gla.ac.in">
+        </label>
+        <br><br>
+
+        <label>Mobile Number * : 
+            <input type="tel" name="mobile" required pattern="[0-9]{10}" placeholder="9876543210">
+        </label>
+        <br><br>
+
+        <label>Date of Birth : 
+            <input type="date" name="dob" max="2010-12-31">
+        </label>
+        <br><br>
+
+        <label>Appointment Date * : 
+            <input type="date" name="app_date" required min="2026-09-04">
+        </label>
+        <br><br>
+
+        <label>Appointment Time * : 
+            <input type="time" name="app_time" required min="09:00" max="19:00">
+        </label>
+        <br><br>
+
+        <label>Select Doctor * : 
+            <select name="doctor" required>
+                <option value="">--Select Doctor--</option>
+                <option value="dr-sharma">Dr. Sharma - Cardiologist</option>
+                <option value="dr-verma">Dr. Verma - Dermatologist</option>
+                <option value="dr-singh">Dr. Singh - Orthopedic</option>
+                <option value="dr-gupta">Dr. Gupta - Pediatrician</option>
+                <option value="dr-nair">Dr. Nair - General Physician</option>
+            </select>
+        </label>
+        <br><br>
+
+        <label>Visit Type * : 
+            <input type="radio" name="visit_type" value="new" required> New Patient
+            <input type="radio" name="visit_type" value="followup"> Follow-up
+            <input type="radio" name="visit_type" value="consultation"> Consultation
+            <input type="radio" name="visit_type" value="emergency"> Emergency
+        </label>
+        <br><br>
+
+        <label>Preferred Communication : 
+            <input type="radio" name="comm" value="phone"> Phone
+            <input type="radio" name="comm" value="email"> Email
+            <input type="radio" name="comm" value="whatsapp"> WhatsApp
+        </label>
+        <br><br>
+
+        <label>Reason for Visit * : 
+            <textarea name="reason" required rows="4" cols="40" placeholder="Describe your health issue"></textarea>
+        </label>
+        <br><br>
+
+        <label>Patient ID (optional) : 
+            <input type="text" name="patient_id" maxlength="10" placeholder="If already registered">
+        </label>
+        <br><br>
+
+        <label>
+            <input type="checkbox" name="terms" required> 
+            * I accept the appointment terms and conditions.
+        </label>
+        <br><br>
+
+        <input type="submit" value="Book Appointment">
+        <input type="reset" value="Clear">
+    </form>
+
+    <br>
+    <p>
+        For emergency: <a href="tel:+911234567890">Call +91-1234567890</a>
+    </p>
+
+</body>
+</html>

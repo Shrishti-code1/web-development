@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Commerce Checkout</title>
+</head>
+<body>
+
+    <h1>Checkout</h1>
+    <p>Complete your purchase by filling the details below. Your order will be processed after payment confirmation.</p>
+
+    <h3>Your Order Summary</h3>
+    <table border="1">
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Unit Price</th>
+            <th>Total</th>
+        </tr>
+        <tr>
+            <td>Laptop Bag</td>
+            <td>1</td>
+            <td>₹999</td>
+            <td>₹999</td>
+        </tr>
+        <tr>
+            <td>Wireless Mouse</td>
+            <td>2</td>
+            <td>₹499</td>
+            <td>₹998</td>
+        </tr>
+        <tr>
+            <td>USB-C Cable</td>
+            <td>3</td>
+            <td>₹299</td>
+            <td>₹897</td>
+        </tr>
+    </table>
+
+    <form action="#" method="post">
+
+        <h2>Customer Information</h2>
+        <label for="custName">Full Name *</label><br>
+        <input type="text" id="custName" name="custName" placeholder="Enter full name" minlength="3" maxlength="50" required><br><br>
+
+        <label for="custEmail">Email *</label><br>
+        <input type="email" id="custEmail" name="custEmail" placeholder="your@email.com" required><br><br>
+
+        <label for="custMobile">Mobile Number *</label><br>
+        <input type="tel" id="custMobile" name="custMobile" placeholder="9876543210" pattern="[0-9]{10}" maxlength="10" minlength="10" required><br><br>
+
+        <h2>Delivery Address</h2>
+        <label for="house">House/Street *</label><br>
+        <input type="text" id="house" name="house" placeholder="House number and street" required><br><br>
+
+        <label for="city">City *</label><br>
+        <input type="text" id="city" name="city" placeholder="City name" required><br><br>
+
+        <label for="state">State *</label><br>
+        <select id="state" name="state" required>
+            <option value="">-- Select --</option>
+            <option value="up">Uttar Pradesh</option>
+            <option value="delhi">Delhi</option>
+            <option value="mh">Maharashtra</option>
+            <option value="ka">Karnataka</option>
+            <option value="tn">Tamil Nadu</option>
+            <option value="wb">West Bengal</option>
+        </select><br><br>
+
+        <label for="pincode">Postal Code *</label><br>
+        <input type="number" id="pincode" name="pincode" placeholder="110001" min="100000" max="999999" required><br><br>
+
+        <label for="country">Country *</label><br>
+        <select id="country" name="country" required>
+            <option value="">-- Select --</option>
+            <option value="in">India</option>
+            <option value="us">United States</option>
+            <option value="uk">United Kingdom</option>
+            <option value="ca">Canada</option>
+            <option value="au">Australia</option>
+        </select><br><br>
+
+        <h2>Delivery Options</h2>
+        <p>Choose delivery speed *</p>
+        <input type="radio" id="standard" name="delivery" value="standard" required>
+        <label for="standard">Standard (5-7 days)</label><br>
+        <input type="radio" id="express" name="delivery" value="express">
+        <label for="express">Express (2-3 days)</label><br>
+        <input type="radio" id="sameday" name="delivery" value="sameday">
+        <label for="sameday">Same Day</label><br><br>
+
+        <h2>Payment Options</h2>
+        <p>Select payment method *</p>
+        <input type="radio" id="card" name="payment" value="card" required>
+        <label for="card">Card</label><br>
+        <input type="radio" id="cod" name="payment" value="cod">
+        <label for="cod">Cash on Delivery</label><br>
+        <input type="radio" id="upi" name="payment" value="upi">
+        <label for="upi">UPI/Online Payment</label><br><br>
+
+        <label for="cardName">Card Holder Name</label><br>
+        <input type="text" id="cardName" name="cardName" placeholder="Name on card"><br><br>
+
+        <label for="cardNumber">Card Number</label><br>
+        <input type="number" id="cardNumber" name="cardNumber" placeholder="1234 5678 9012 3456"><br><br>
+
+        <label for="expiry">Expiry Date</label><br>
+        <input type="month" id="expiry" name="expiry"><br><br>
+
+        <label for="cvv">Security Code</label><br>
+        <input type="number" id="cvv" name="cvv" placeholder="123" min="100" max="999"><br><br>
+
+        <h2>Billing Address</h2>
+        <input type="checkbox" id="billingSame" name="billingSame" value="same" checked>
+        <label for="billingSame">Billing address same as delivery</label><br><br>
+
+        <h2>Delivery Instructions</h2>
+        <label for="instructions">Any special instructions?</label><br>
+        <textarea id="instructions" name="instructions" rows="3" cols="50" placeholder="e.g. Leave at security gate"></textarea><br><br>
+
+        <h2>Promo Code</h2>
+        <label for="promo">Coupon/Promo Code</label><br>
+        <input type="text" id="promo" name="promo" placeholder="Enter code" maxlength="15" pattern="[A-Z0-9]{5,15}"><br><br>
+
+        <h2>Terms & Confirmation</h2>
+        <input type="checkbox" id="terms" name="terms" value="accepted" required>
+        <label for="terms">I agree to the Terms & Conditions *</label><br>
+
+        <input type="checkbox" id="orderConfirm" name="orderConfirm" value="confirmed" required>
+        <label for="orderConfirm">I confirm my order *</label><br><br>
+
+        <input type="submit" value="Place Order">
+        <input type="reset" value="Reset">
+
+    </form>
+
+    <h3>Continue Shopping</h3>
+    <p><a href="https://www.flipkart.com" target="_blank">Visit Flipkart</a> for more products</p>
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23fff3e0'/%3E%3Ctext x='15' y='60' font-size='40' fill='%23e65100' font-family='Arial'%3E🛒%3C/text%3E%3C/svg%3E" alt="Shopping cart" width="100" height="100">
+
+</body>
+</html>

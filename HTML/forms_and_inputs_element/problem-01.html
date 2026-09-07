@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GLA University Admission Form</title>
+</head>
+<body>
+
+    <h1>GLA University, Greater Noida</h1>
+    <h2>Admission Application Form 2026</h2>
+    
+    <p>
+        Welcome to GLA University! Please fill this admission form carefully. 
+        All fields marked with * are mandatory. This form is for the academic year 2026-27.
+    </p>
+
+    <!-- University image -->
+    <img src="https://www.gla.ac.in/images/gla-university-logo.png" alt="GLA University Logo" width="200">
+
+    <form>
+        <!-- Personal Details -->
+        <h3>Personal Details</h3>
+        
+        <label>Full Name * : 
+            <input type="text" name="fullname" required minlength="3" maxlength="50" placeholder="Enter your full name">
+        </label>
+        <br><br>
+
+        <label>Date of Birth * : 
+            <input type="date" name="dob" required min="2000-01-01" max="2010-12-31">
+        </label>
+        <br><br>
+
+        <label>Email ID * : 
+            <input type="email" name="email" required placeholder="example@gla.ac.in">
+        </label>
+        <br><br>
+
+        <label>Mobile Number * : 
+            <input type="tel" name="mobile" required pattern="[0-9]{10}" placeholder="9876543210" maxlength="10">
+        </label>
+        <br><br>
+
+        <label>Password (Application PIN) * : 
+            <input type="password" name="password" required minlength="6" maxlength="12" placeholder="Create a strong password">
+        </label>
+        <br><br>
+
+        <label>Gender * : 
+            <input type="radio" name="gender" value="male" required> Male
+            <input type="radio" name="gender" value="female"> Female
+            <input type="radio" name="gender" value="other"> Other
+        </label>
+        <br><br>
+
+        <label>Category * : 
+            <select name="category" required>
+                <option value="">--Select Category--</option>
+                <option value="general">General</option>
+                <option value="obc">OBC</option>
+                <option value="sc">SC</option>
+                <option value="st">ST</option>
+                <option value="ews">EWS</option>
+            </select>
+        </label>
+        <br><br>
+
+        <label>Permanent Address * : 
+            <textarea name="address" required rows="4" cols="40" placeholder="Enter your complete address"></textarea>
+        </label>
+        <br><br>
+
+        <!-- Course Selection -->
+        <h3>Course Selection</h3>
+        
+        <label>Choose Program * : 
+            <select name="course" required>
+                <option value="">--Select Course--</option>
+                <option value="btech-cse">B.Tech Computer Science</option>
+                <option value="btech-ai">B.Tech Artificial Intelligence</option>
+                <option value="btech-ds">B.Tech Data Science</option>
+                <option value="bca">BCA</option>
+                <option value="mca">MCA</option>
+                <option value="bba">BBA</option>
+            </select>
+        </label>
+        <br><br>
+
+        <!-- Academic Details -->
+        <h3>Academic Details</h3>
+
+        <label>Previous Qualification * : 
+            <select name="qualification" required>
+                <option value="">--Select--</option>
+                <option value="10+2">10+2 (Intermediate)</option>
+                <option value="diploma">Diploma</option>
+                <option value="graduation">Graduation</option>
+            </select>
+        </label>
+        <br><br>
+
+        <label>Percentage / CGPA * : 
+            <input type="number" name="percentage" required min="0" max="100" step="0.01" placeholder="e.g., 85.5">
+        </label>
+        <br><br>
+
+        <label>Passing Year * : 
+            <input type="number" name="passing_year" required min="2020" max="2026" placeholder="e.g., 2024">
+        </label>
+        <br><br>
+
+        <label>School / College Name * : 
+            <input type="text" name="school_name" required minlength="3" maxlength="100" placeholder="Enter your school/college name">
+        </label>
+        <br><br>
+
+        <!-- Multiple Choice: Subjects Interested -->
+        <label>Subjects Interested in (Select all that apply) : 
+            <br>
+            <input type="checkbox" name="subjects" value="maths"> Mathematics
+            <input type="checkbox" name="subjects" value="physics"> Physics
+            <input type="checkbox" name="subjects" value="chemistry"> Chemistry
+            <input type="checkbox" name="subjects" value="computer"> Computer Science
+        </label>
+        <br><br>
+
+        <!-- File Upload -->
+        <label>Upload Admit Card / Marksheet (if available) : 
+            <input type="file" name="document">
+        </label>
+        <br><br>
+
+        <!-- Declaration -->
+        <label>
+            <input type="checkbox" name="declaration" required> 
+            * I declare that all information provided is true and correct.
+        </label>
+        <br><br>
+
+        <!-- Submit & Reset -->
+        <input type="submit" value="Submit Application">
+        <input type="reset" value="Clear All">
+    </form>
+
+    <br>
+    <p>
+        For any queries, visit: 
+        <a href="https://www.gla.ac.in" target="_blank">GLA University Official Website</a>
+    </p>
+
+</body>
+</html>

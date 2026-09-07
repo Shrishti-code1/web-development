@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Enrollment - Student Registration</title>
+</head>
+<body>
+
+    <h1>Online Course Enrollment</h1>
+    <p>Welcome to the technical course registration platform. Please fill in all required details to enroll in your desired program. This form collects account, course, learning preference and background information.</p>
+
+    <form action="#" method="post">
+
+        <h2>Student Information</h2>
+        <label for="name">Student Name *</label><br>
+        <input type="text" id="name" name="studentName" placeholder="Enter full name" minlength="3" maxlength="50" required><br><br>
+
+        <label for="email">Email *</label><br>
+        <input type="email" id="email" name="email" placeholder="your@email.com" required><br><br>
+
+        <label for="password">Password *</label><br>
+        <input type="password" id="password" name="password" placeholder="Min 8 characters" minlength="8" maxlength="20" required><br><br>
+
+        <label for="mobile">Mobile Number *</label><br>
+        <input type="tel" id="mobile" name="mobile" placeholder="9876543210" pattern="[0-9]{10}" maxlength="10" minlength="10" required><br><br>
+
+        <label for="dob">Date of Birth *</label><br>
+        <input type="date" id="dob" name="dob" min="1990-01-01" max="2008-12-31" required><br><br>
+
+        <h2>Course Selection</h2>
+        <label for="course">Select Course *</label><br>
+        <select id="course" name="course" required>
+            <option value="">-- Select --</option>
+            <option value="btech_cse">B.Tech Computer Science</option>
+            <option value="btech_ai">B.Tech Artificial Intelligence</option>
+            <option value="btech_ds">B.Tech Data Science</option>
+            <option value="mca">MCA</option>
+            <option value="bca">BCA</option>
+            <option value="pgd_ai">PG Diploma in AI</option>
+        </select><br><br>
+
+        <label for="batch">Batch/Session *</label><br>
+        <select id="batch" name="batch" required>
+            <option value="">-- Select --</option>
+            <option value="jan2026">January 2026</option>
+            <option value="apr2026">April 2026</option>
+            <option value="jul2026">July 2026</option>
+            <option value="oct2026">October 2026</option>
+        </select><br><br>
+
+        <h2>Learning Preference</h2>
+        <p>Choose your learning mode *</p>
+        <input type="radio" id="online" name="learningMode" value="online" required>
+        <label for="online">Online</label><br>
+        <input type="radio" id="offline" name="learningMode" value="offline">
+        <label for="offline">Offline</label><br>
+        <input type="radio" id="hybrid" name="learningMode" value="hybrid">
+        <label for="hybrid">Hybrid</label><br><br>
+
+        <h2>Areas of Interest</h2>
+        <p>Select all that apply</p>
+        <input type="checkbox" id="java" name="topics" value="java">
+        <label for="java">Java</label><br>
+        <input type="checkbox" id="python" name="topics" value="python">
+        <label for="python">Python</label><br>
+        <input type="checkbox" id="webdev" name="topics" value="webdev">
+        <label for="webdev">Web Development</label><br>
+        <input type="checkbox" id="dsa" name="topics" value="dsa">
+        <label for="dsa">Data Structures</label><br>
+        <input type="checkbox" id="db" name="topics" value="db">
+        <label for="db">Database</label><br><br>
+
+        <h2>Educational Background</h2>
+        <label for="eduLevel">Education Level *</label><br>
+        <select id="eduLevel" name="educationLevel" required>
+            <option value="">-- Select --</option>
+            <option value="10+2">10+2</option>
+            <option value="diploma">Diploma</option>
+            <option value="bachelors">Bachelor's</option>
+            <option value="masters">Master's</option>
+        </select><br><br>
+
+        <label for="college">College/Institution *</label><br>
+        <input type="text" id="college" name="college" placeholder="College name" minlength="3" maxlength="80" required><br><br>
+
+        <label for="semester">Current Semester/Year *</label><br>
+        <input type="text" id="semester" name="semester" placeholder="e.g. 2nd Semester" minlength="2" maxlength="30" required><br><br>
+
+        <h2>Programming Experience</h2>
+        <label for="experience">Years of programming experience *</label><br>
+        <input type="number" id="experience" name="experience" min="0" max="10" step="0.5" required><br><br>
+
+        <h2>GitHub/Portfolio (Optional)</h2>
+        <label for="github">GitHub or Portfolio URL</label><br>
+        <input type="url" id="github" name="github" placeholder="https://github.com/username"><br><br>
+
+        <h2>Learning Goals</h2>
+        <label for="goals">What do you want to achieve? *</label><br>
+        <textarea id="goals" name="goals" rows="4" cols="50" placeholder="Describe your learning goals" minlength="10" maxlength="300" required></textarea><br><br>
+
+        <h2>Confirmation</h2>
+        <input type="checkbox" id="confirm" name="confirm" value="confirmed" required>
+        <label for="confirm">I confirm that all information provided is accurate *</label><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+    <h3>Course Information</h3>
+    <p><a href="https://www.coursera.org" target="_blank">Explore more courses on Coursera</a></p>
+    <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23e8f4f8'/%3E%3Ctext x='20' y='60' font-size='30' fill='%232b5a8c' font-family='Arial'%3E📚%3C/text%3E%3C/svg%3E" alt="Course icon" width="100" height="100">
+
+</body>
+</html>
